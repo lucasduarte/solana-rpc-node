@@ -27,7 +27,6 @@ exec /mnt/solana/target/release/solana-validator \
     --rpc-send-default-max-retries 3 \
     --rpc-send-service-max-retries 3 \
     --rpc-send-retry-ms 1000 \
-    --tpu-enable-udp \
     --rpc-send-leader-count 3 \
     --full-rpc-api \
     --enable-rpc-bigtable-ledger-storage \
