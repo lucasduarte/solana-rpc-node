@@ -2,7 +2,7 @@
   become: true
   become_user: root
   command:
-    dd if=/dev/zero of=/mnt/swapfile bs=1024 count={{ swap_mb }}k
+    dd if=/dev/{{ swap_disk }} of=/mnt/swapfile bs=1024 count={{ swap_mb }}k
     creates="/mnt/swapfile"
 
 - name: Change swap file permissions
