@@ -8,15 +8,6 @@
   become: true
   become_user: root
 
-- name: solana snapshots
-  file:
-    path: /mnt/solana-snapshots
-    state: directory
-    owner: solana
-    group: solana
-  become: true
-  become_user: root
-
 - name: solana ledger
   file:
     path: /mnt/solana-ledger
@@ -29,6 +20,15 @@
 - name: solana accounts
   file:
     path: /mnt/solana-accounts
+    state: directory
+    owner: solana
+    group: solana
+  become: true
+  become_user: root
+
+- name: solana snapshots
+  file:
+    path: /mnt/solana-accounts/solana-snapshots
     state: directory
     owner: solana
     group: solana
