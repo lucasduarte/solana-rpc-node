@@ -24,9 +24,7 @@ exec /mnt/solana/target/release/solana-validator \
     --snapshots /mnt/solana-snapshots \
     --no-snapshot-fetch \
     --limit-ledger-size 400000000 \
-    --rpc-send-default-max-retries 3 \
-    --rpc-send-service-max-retries 3 \
-    --rpc-send-retry-ms 1000 \
+    --rpc-send-retry-ms 2000 \
     --rpc-send-leader-count 3 \
     --full-rpc-api \
     --enable-rpc-bigtable-ledger-storage \
