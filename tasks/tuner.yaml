@@ -29,7 +29,6 @@
 
       # Increase number of allowed open file descriptors
       fs.nr_open = 1000000
-      EOF"
 
       # vm.tuning
       vm.swappiness=1
