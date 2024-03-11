@@ -27,6 +27,10 @@
       # A suggested value for pid_max is 1024 * <# of cpu cores/threads in system>
       kernel.pid_max=49152
 
+      # Increase number of allowed open file descriptors
+      fs.nr_open = 1000000
+      EOF"
+
       # vm.tuning
       vm.swappiness=1
       vm.max_map_count=2000000
