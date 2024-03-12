@@ -8,10 +8,8 @@ exec /mnt/solana/target/release/solana-validator \
     --entrypoint entrypoint4.mainnet-beta.solana.com:8001 \
     --entrypoint entrypoint5.mainnet-beta.solana.com:8001 \
     --rpc-port 8899 \
-    --dynamic-port-range 8002-8099 \
-    --no-port-check \
+    --dynamic-port-range 8000-8099 \
     --gossip-port 8001 \
-    --no-untrusted-rpc \
     --no-voting \
     --rpc-bind-address 0.0.0.0 \
     --enable-cpi-and-log-storage \
@@ -23,17 +21,6 @@ exec /mnt/solana/target/release/solana-validator \
     --ledger /mnt/solana-ledger \
     --no-snapshot-fetch \
     --limit-ledger-size 400000000 \
-    --rpc-send-retry-ms 2000 \
-    --rpc-send-leader-count 3 \
+    --rpc-send-retry-ms 1 \
     --full-rpc-api \
-    --enable-rpc-bigtable-ledger-storage \
     --account-index-exclude-key kinXdEcpDQeHPEuQnqmUgtYykqKGVFq6CeVX5iAHJq6 \
-    --known-validator 7cVfgArCheMR6Cs4t6vz5rfnqd56vZq4ndaBrY5xkxXy \
-    --known-validator DDnAqxJVFo2GVTujibHt5cjevHMSE9bo8HJaydHoshdp \
-    --known-validator Ninja1spj6n9t5hVYgF3PdnYz2PLnkt7rvaw3firmjs \
-    --known-validator 7Np41oeYqPefeNQEHSv1UDhYrehxin3NStELsSKCT4K2 \
-    --known-validator GdnSyH3YtwcxFvQrVVJMm1JhTS4QVX7MFsX56uJLUfiZ \
-    --known-validator DE1bawNcRJB9rVm3buyMVfr8mBEoyyu73NBovf2oXJsJ \
-    --known-validator CakcnaRDHka2gXyfbEd2d3xsvkJkqsLw2akB3zsN1D2S \
-    --known-validator 8ebFZA8NPLBZD91CwsG1HWQsa2B5Ludgdyf5Hi3sYhhs \
-    --known-validator GiYSnFRrXrmkJMC54A1j3K4xT6ZMfx1NSThEe5X2WpDe
