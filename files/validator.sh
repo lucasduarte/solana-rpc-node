@@ -19,6 +19,7 @@ exec /mnt/solana/target/release/solana-validator \
     --log /mnt/logs/solana-validator.log \
     --accounts /mnt/solana-accounts \
     --ledger /mnt/solana-ledger \
+    --snapshots /mnt/solana-accounts/snapshots \
     --no-snapshot-fetch \
     --limit-ledger-size 400000000 \
     --rpc-send-retry-ms 1 \
