@@ -11,6 +11,7 @@ exec /mnt/solana/target/release/solana-validator \
     --dynamic-port-range 8000-8099 \
     --gossip-port 8001 \
     --no-voting \
+    --no-port-check \
     --rpc-bind-address 0.0.0.0 \
     --enable-cpi-and-log-storage \
     --account-index program-id spl-token-owner spl-token-mint \
