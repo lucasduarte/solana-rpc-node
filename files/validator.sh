@@ -22,7 +22,9 @@ exec /mnt/solana/target/release/solana-validator \
     --ledger /mnt/solana-ledger \
     --snapshots /mnt/solana-accounts/snapshots \
     --no-snapshot-fetch \
-    --limit-ledger-size 400000000 \
+    --limit-ledger-size 50000000 \
     --rpc-send-retry-ms 1 \
+    --use-snapshot-archives-at-startup \
     --full-rpc-api \
     --account-index-exclude-key kinXdEcpDQeHPEuQnqmUgtYykqKGVFq6CeVX5iAHJq6 \
+    --account-index-exclude-key TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA \
