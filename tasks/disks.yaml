@@ -11,22 +11,10 @@
   shell: mkfs.ext4 /dev/{{ ledger_disk }}
   when: mount_mnt.rc != 0
 
-- name: format disks with ext4 2
-  become: true
-  become_user: root
-  shell: mkfs.ext4 /dev/{{ account_disk }}
-  when: mount_mnt.rc != 0
-
 - name: mount disks for ledger
   become: true
   become_user: root
   shell: mount /dev/{{ ledger_disk }} /mnt/solana-ledger && chown -R solana:solana /mnt/solana-ledger
-  when: mount_mnt.rc != 0
-
-- name: mount disks for account
-  become: true
-  become_user: root
-  shell: mount /dev/{{ account_disk }} /mnt/solana-accounts && chown -R solana:solana /mnt/solana-accounts
   when: mount_mnt.rc != 0
 
 - name: add ledger disk to fstab
@@ -36,11 +24,3 @@
     dest: /etc/fstab
     state: present
     line: "/dev/{{ ledger_disk }}    /mnt/solana-ledger    ext4    defaults    0    1"
-
-- name: add account disk to fstab
-  become: true
-  become_user: root
-  lineinfile:
-    dest: /etc/fstab
-    state: present
-    line: "/dev/{{ account_disk }}    /mnt/solana-accounts    ext4    defaults    0    1"
